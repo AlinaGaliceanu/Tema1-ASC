@@ -1,0 +1,29 @@
+Galiceanu Alina-Madalina 332CA Tema 1- Markeplace ASC
+
+Pentru implementarea temei am completat functiile claselor consumer
+producer si markeplace.
+Pentru 'consumer.py':
+	-am implementat functia run: am parcurs carts, iar pentru fiecare lista
+	 iar in functie de valoarea pentru "type" adauga (daca exista produsul 
+	 daca nu exista, asteapta pana cand produsul devine disponibil)
+	 sau scoate produse din lista, iar la finalul fiecarui "cart" printez 
+	 produsele ramase in urma executarii operatiile mentionate anterior.
+Pentru 'producer.py':
+	-Atata timp cat exista loc in coada de produse se publica cate un 
+	 produs dupa un timp specific fiecarui produs, in caz ca nu mai e loc
+	 in coada se asteapta republish_wait_time si se incearca din nou adaugarea
+Pentru 'marketplace.py':
+	-pentru 'register_producer' intorc un index a carui valoare se incrementeaza
+	la fiecare apel al functiei
+	-pentru 'publish' verific daca mai este in loc in lista producatorului care
+	a apelat functia, daca exista adaug un produs nou si intoarce True, daca nu
+	exista functia intoarce False
+	-pentru 'new_cart' am intors un index aferent fiecarui cart si adaug o lista
+	goala in lista de liste unde tin produsele rezervate de fiecare consumator
+	-pentru 'add_to_cart' adaug produsul daca exista in lista consumatorului 
+	sterg din lista de produse a producatorului produsul respectiv si intorc 
+	True, in cazul in care nu exista produsul dorit functia intoarce False
+	-pentru 'remove_from_cart' scot produsul din lista de produse rezervate
+	si il adaug inapoi in lista producatorului de unde a fost luat produsul
+	-pentru 'place_order' intorc o lista cu produsele din lista de produse
+	rezervate a consumatorului
